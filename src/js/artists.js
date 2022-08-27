@@ -81,6 +81,8 @@ artistListEl.addEventListener('click', (e) => {
       .classList.remove('active')
     e.target.classList.add('active')
     pageSwitcher(tabId)
+    location.reload()
+    filterImagesByArtist(tabId)
   }
 })
 
@@ -218,6 +220,6 @@ function pageSwitcher(tabId) {
     }
   })
 
-   filterImagesByArtist(tabId)
+
 
 }
