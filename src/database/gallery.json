@@ -3,210 +3,210 @@
     "id": 1,
     "artistId": 1,
     "name": "Baby Goku",
-    "source": "../images/peter-lyons/baby-goku.jpg"
+    "source": "/needles/assets/images/peter-lyons/baby-goku.jpg"
   },
   {
     "id": 2,
     "artistId": 1,
     "name": "Black Geometric",
-    "source": "../images/peter-lyons/black-geometric.png"
+    "source": "/needles/assets/images/peter-lyons/black-geometric.png"
   },
   {
     "id": 3,
     "artistId": 1,
     "name": "Brain and Heart",
-    "source": "../images/peter-lyons/brain-and-heart.png"
+    "source": "/needles/assets/images/peter-lyons/brain-and-heart.png"
   },
   {
     "id": 4,
     "artistId": 1,
     "name": "Buddha",
-    "source": "../images/peter-lyons/buddha.png"
+    "source": "/needles/assets/images/peter-lyons/buddha.png"
   },
   {
     "id": 5,
     "artistId": 1,
     "name": "Green FireFly",
-    "source": "../images/peter-lyons/green-firefly.jpg"
+    "source": "/needles/assets/images/peter-lyons/green-firefly.jpg"
   },
   {
     "id": 6,
     "artistId": 1,
     "name": "Itachi",
-    "source": "../images/peter-lyons/itachi.jpg"
+    "source": "/needles/assets/images/peter-lyons/itachi.jpg"
   },
   {
     "id": 7,
     "artistId": 1,
     "name": "Koi",
-    "source": "../images/peter-lyons/koi.jpg"
+    "source": "/needles/assets/images/peter-lyons/koi.jpg"
   },
   {
     "id": 8,
     "artistId": 1,
     "name": "Stitch",
-    "source": "../images/peter-lyons/lilo-and-stitch.jpg"
+    "source": "/needles/assets/images/peter-lyons/lilo-and-stitch.jpg"
   },
   {
     "id": 9,
     "artistId": 1,
     "name": "R.D.E.V",
-    "source": "../images/peter-lyons/rdev.png"
+    "source": "/needles/assets/images/peter-lyons/rdev.png"
   },
   {
     "id": 10,
     "artistId": 1,
     "name": "The Avengers Logo",
-    "source": "../images/peter-lyons/the-avengers.png"
+    "source": "/needles/assets/images/peter-lyons/the-avengers.png"
   },
   {
     "id": 11,
     "artistId": 2,
     "name": "Angel Wing",
-    "source": "../images/ava-ellis/angel-wing.png"
+    "source": "/needles/assets/images/ava-ellis/angel-wing.png"
   },
   {
     "id": 12,
     "artistId": 2,
     "name": "Clock and Rose",
-    "source": "../images/ava-ellis/clock-and-rose.png"
+    "source": "/needles/assets/images/ava-ellis/clock-and-rose.png"
   },
   {
     "id": 13,
     "artistId": 2,
     "name": "Eagle",
-    "source": "../images/ava-ellis/eagle-arm.png"
+    "source": "/needles/assets/images/ava-ellis/eagle-arm.png"
   },
   {
     "id": 14,
     "artistId": 2,
     "name": "Eagle",
-    "source": "../images/ava-ellis/eagle-chest.png"
+    "source": "/needles/assets/images/ava-ellis/eagle-chest.png"
   },
   {
     "id": 15,
     "artistId": 2,
     "name": "Fairy Tail",
-    "source": "../images/ava-ellis/fairy-tail.jpg"
+    "source": "/needles/assets/images/ava-ellis/fairy-tail.jpg"
   },
   {
     "id": 16,
     "artistId": 2,
     "name": "Family",
-    "source": "../images/ava-ellis/family.png"
+    "source": "/needles/assets/images/ava-ellis/family.png"
   },
   {
     "id": 17,
     "artistId": 2,
     "name": "Flower",
-    "source": "../images/ava-ellis/angel-wing.png"
+    "source": "/needles/assets/images/ava-ellis/angel-wing.png"
   },
   {
     "id": 18,
     "artistId": 2,
     "name": "The Joker",
-    "source": "../images/ava-ellis/joker.jpg"
+    "source": "/needles/assets/images/ava-ellis/joker.jpg"
   },
   {
     "id": 19,
     "artistId": 3,
     "name": "American Flag",
-    "source": "../images/patrick-parker/american-flag.jpg"
+    "source": "/needles/assets/images/patrick-parker/american-flag.jpg"
   },
   {
     "id": 20,
     "artistId": 3,
     "name": "Bear",
-    "source": "../images/patrick-parker/bear-chest.png"
+    "source": "/needles/assets/images/patrick-parker/bear-chest.png"
   },
   {
     "id": 21,
     "artistId": 3,
     "name": "Black Flower",
-    "source": "../images/patrick-parker/black-flower.png"
+    "source": "/needles/assets/images/patrick-parker/black-flower.png"
   },
   {
     "id": 22,
     "artistId": 3,
     "name": "Cross and Lion",
-    "source": "../images/patrick-parker/cross-lion.png"
+    "source": "/needles/assets/images/patrick-parker/cross-lion.png"
   },
   {
     "id": 23,
     "artistId": 3,
     "name": "Dragon",
-    "source": "../images/patrick-parker/dragon.png"
+    "source": "/needles/assets/images/patrick-parker/dragon.png"
   },
   {
     "id": 24,
     "artistId": 3,
     "name": "Demon Koi",
-    "source": "../images/patrick-parker/evil-koi.png"
+    "source": "/needles/assets/images/patrick-parker/evil-koi.png"
   },
   {
     "id": 25,
     "artistId": 3,
     "name": "Joker",
-    "source": "../images/patrick-parker/joker.png"
+    "source": "/needles/assets/images/patrick-parker/joker.png"
   },
   {
     "id": 26,
     "artistId": 3,
     "name": "Sparta",
-    "source": "../images/patrick-parker/sparta.png"
+    "source": "/needles/assets/images/patrick-parker/sparta.png"
   },
   {
     "id": 27,
     "artistId": 4,
     "name": "Bear and The falling star",
-    "source": "../images/sam-elliott/bear-and-falling-star.png"
+    "source": "/needles/assets/images/sam-elliott/bear-and-falling-star.png"
   },
   {
     "id": 28,
     "artistId": 4,
     "name": "Sparta",
-    "source": "../images/sam-elliott/black-sparta.png"
+    "source": "/needles/assets/images/sam-elliott/black-sparta.png"
   },
   {
     "id": 29,
     "artistId": 4,
     "name": "Chinese Characters",
-    "source": "../images/sam-elliott/chinese.jpg"
+    "source": "/needles/assets/images/sam-elliott/chinese.jpg"
   },
   {
     "id": 30,
     "artistId": 4,
     "name": "Clock And Geometric",
-    "source": "../images/sam-elliott/clock-and-geometric.png"
+    "source": "/needles/assets/images/sam-elliott/clock-and-geometric.png"
   },
   {
     "id": 31,
     "artistId": 4,
     "name": "Eagle",
-    "source": "../images/sam-elliott/eagle.png"
+    "source": "/needles/assets/images/sam-elliott/eagle.png"
   },
   {
     "id": 32,
     "artistId": 4,
     "name": "Einstein",
-    "source": "../images/sam-elliott/einstein.png"
+    "source": "/needles/assets/images/sam-elliott/einstein.png"
   },
   {
     "id": 33,
     "artistId": 4,
     "name": "Lion King",
-    "source": "../images/sam-elliott/lion-king.png"
+    "source": "/needles/assets/images/sam-elliott/lion-king.png"
   },
   {
     "id": 34,
     "artistId": 4,
     "name": "The Moon and The Wolf",
-    "source": "../images/sam-elliott/moon-and-wolf.png"
+    "source": "/needles/assets/images/sam-elliott/moon-and-wolf.png"
   },
   {
     "id": 35,
     "artistId": 4,
     "name": "The Scropion",
-    "source": "../images/sam-elliott/scropion.png"
+    "source": "/needles/assets/images/sam-elliott/scropion.png"
   }
 ]
