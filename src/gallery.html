@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Needles Tattoo Studio</title>
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/bb827868b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Modal -->
+    <dialog data-gallery-modal>
+      <div data-modal-close-btn class="modal-close-btn">
+        <i class="fa fa-solid fa-xmark"></i>
+      </div>
+      <div class="modal-image-container">
+        <img src="" alt="" class="img-fluid" data-modal-img />
+      </div>
+    </dialog>
+    <button class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg font-heading py-4 px-md-5 fixed-top">
+      <div class="container-fluid">
+        <a
+          class="logo navbar-brand text-light fs-lg-1 fs-2 fw-semibold"
+          href="#"
+        >
+          Needles
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fs-5 text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="artists.html">
+                Artists
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link is-active"
+                aria-current="page"
+                href="gallery.html"
+              >
+                Gallery
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="contact.html">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <section id="gallery-heading">
+        <div class="container">
+          <div class="gallery-heading-container" data-aos="fade-up">
+            <h1 class="text-uppercase font-heading">
+              The
+              <span class="text-primary">Gallery</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section id="gallery" class="bg-dark">
+        <div class="container-fluid">
+          <form class="form-container" autocomplete="off" data-gallery-form>
+            <div
+              class="row py-5 px-lg-5 mb-5 justify-content-end align-items-end"
+            >
+              <fieldset class="col-lg-4 col-md-5 order-0 order-md-1">
+                <label for="search-image"></label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    name="search"
+                    id="search-image"
+                    class="form-control"
+                    placeholder="What do you want to see ..."
+                  />
+                  <button type="submit" class="primary-btn search-btn">
+                    Search
+                  </button>
+                </div>
+              </fieldset>
+              <fieldset class="col-lg-3 col-md-4 col-6 order-1 order-md-0">
+                <!-- Select -->
+                <label for="search-artist"></label>
+
+                <select
+                  name="artist"
+                  id="search-artist"
+                  class="form-select"
+                  data-select
+                ></select>
+              </fieldset>
+            </div>
+          </form>
+
+          <!-- Gallery-images -->
+          <div class="row px-lg-5 gy-3" data-gallery></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-4">
+            <h4>our coordinates</h4>
+            <p>
+              199 Lafayette St,New York
+              <br />
+              NY 10012,United States
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h4>our rules + shop info</h4>
+            <p>
+              You must be 18 to get a tattoo. NO MINORS = NO EXCEPTIONS. Please
+              have a valid ID with you. *Credit Cards Accepted.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <h4>our contacts</h4>
+            <p>123-456-7891</p>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col text-center mt-5">
+            <span class="font-text text-light">
+              ©2022 Needles Tattoo Studio. All Rights Reserved
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/gallery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true, offset: 400 })
+    </script>
+  </body>
+</html>

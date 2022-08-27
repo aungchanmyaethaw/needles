@@ -1,0 +1,814 @@
+// Import all of Bootstrap's CSS
+
+$primary: #e71b24;
+$secondary: #343333;
+$dark: #212121;
+$light: #f8fafc;
+$ff-heading: 'Oswald', sans-serif;
+$ff-text: 'Roboto', sans-serif;
+
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+}
+
+@supports (scrollbar-color: $primary $secondary) {
+  * {
+    scrollbar-color: $primary $secondary;
+    scrollbar-width: thin;
+  }
+}
+
+.font-heading {
+  font-family: $ff-heading;
+}
+.font-text {
+  font-family: $ff-text;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &.scroll-lock {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+.primary-btn {
+  padding: 1em 2em;
+  position: relative;
+  font-size: 1.25rem;
+  font-family: $ff-heading;
+  color: $light;
+  text-transform: uppercase;
+  background-color: $primary;
+  z-index: 1;
+  transition: all 200ms ease-out;
+  border: none;
+
+  &:hover,
+  &:active {
+    color: $primary;
+  }
+
+  &:hover::before,
+  &:active::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: scaleX(0);
+    background-color: $secondary;
+    transform-origin: right;
+    transition: transform 300ms ease-out;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  }
+
+  .primary-btn {
+    font-size: 1rem;
+  }
+}
+
+figure {
+  display: block;
+  min-width: 100%;
+  cursor: pointer;
+  .image-container {
+    min-width: 100%;
+    height: 18rem;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid $secondary;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      object-fit: cover;
+      transition: transform 500ms ease-out;
+    }
+
+    .image-cover {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($dark, 0.3);
+      z-index: 1;
+      pointer-events: none;
+      transition: bottom 400ms ease-out;
+
+      i {
+        font-size: 2rem;
+        color: $light;
+        pointer-events: none;
+      }
+    }
+
+    &:hover .image-cover {
+      bottom: 0;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  figcaption {
+    white-space: nowrap;
+    margin-top: 1em;
+    color: $light;
+    font-family: $ff-heading;
+    font-size: 1.125rem;
+  }
+}
+
+// --- HomePage ---
+
+.scroll-top {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 3rem;
+  right: -3rem;
+  z-index: 10;
+  font-size: 1.25rem;
+  color: $light;
+  background-color: #e71b24;
+  border: none;
+  transition: right 500ms ease;
+
+  i {
+    pointer-events: none;
+  }
+
+  &.appear {
+    right: 0;
+  }
+}
+
+// --- Nav
+
+.navbar {
+  background-color: $dark;
+}
+.navbar-toggler {
+  border: none;
+  color: $light !important;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.nav-item {
+  width: max-content;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 1em;
+
+  .nav-link {
+    color: $light !important;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-item {
+    margin: 0;
+    margin-left: 1em;
+    .nav-link {
+      &::after {
+        content: '';
+        width: 0%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        top: 36px;
+        background-color: $primary;
+        transition: width 200ms ease-in;
+      }
+
+      &:hover {
+        color: $light !important;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &.is-active {
+        color: $primary !important;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// --- Hero
+
+#hero {
+  min-height: 100vh;
+
+  .hero-container {
+    padding: 2em;
+    background-color: rgba($dark, 0.5);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-container {
+    width: 75% !important;
+
+    .hero-heading {
+      font-size: 4rem;
+      white-space: nowrap;
+    }
+
+    .hero-text {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+// --- Features
+
+#features-main {
+  background-color: $light;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    background: $light;
+    clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+  }
+
+  .feature-card {
+    border: none;
+    background-color: transparent;
+
+    .feature-image {
+      width: 140px;
+    }
+  }
+}
+
+// --- Gallary
+
+#gallery-main {
+  .gallery-heading {
+    padding: 12em 2em;
+    display: flex;
+    justify-content: flex-start;
+    h2 {
+      width: max-content;
+      padding: 0.5em;
+      background-color: rgba($dark, 0.5);
+      font-size: 3rem;
+      color: $light;
+    }
+  }
+
+  .gallery-images {
+    background-color: $dark;
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: -100vh;
+      background: $dark;
+      clip-path: polygon(0% 85%, 0% 100%, 100% 100%);
+    }
+
+    .gallery-main-img {
+      width: 20rem;
+      height: 30rem;
+      border: 4px solid $secondary;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #gallery-main {
+    .gallery-heading {
+      padding: 12em 0;
+      h2 {
+        font-size: 5rem;
+      }
+    }
+    .gallery-images {
+      h2 {
+        font-size: 3rem !important;
+      }
+
+      p {
+        width: 50%;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+// --- Artists
+
+#artists-main {
+  .artists-heading {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12em 2em;
+
+    h2 {
+      width: max-content;
+      padding: 0.5em;
+      background-color: rgba($dark, 0.5);
+      font-size: 3rem;
+      color: $light;
+    }
+  }
+
+  .artists-lists {
+    background-color: $light;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: -100vh;
+      background: $light;
+      clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+    }
+  }
+
+  .card {
+    min-height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #artists-main {
+    .artists-heading {
+      padding: 12em 0;
+      h2 {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+// --- Reviews
+
+#reviews {
+  .container {
+    background-color: rgba($dark, 0.5);
+    min-height: 16rem;
+    padding: 1em;
+
+    .review-text {
+      height: 100%;
+    }
+  }
+}
+
+// --- footer
+
+footer {
+  padding: 5em 0;
+  background-color: $dark;
+  text-align: center;
+  h4 {
+    margin-bottom: 1em;
+    font-family: $ff-heading;
+    text-transform: uppercase;
+    color: $primary;
+  }
+  p {
+    color: $light;
+    font-family: $ff-text;
+    font-size: 1.125rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    a {
+      font-size: 1.5rem;
+      color: $light;
+      transition: transform 500ms ease;
+      &:hover {
+        transform: translateY(4px);
+        color: $primary;
+      }
+    }
+  }
+}
+
+// ------------- For Gallery Page -----------------------
+
+dialog {
+  max-width: 32rem;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  .modal-image-container {
+    img {
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  .modal-close-btn {
+    width: max-content;
+    margin-bottom: 0.5em;
+    color: $primary;
+    font-size: 2rem;
+    cursor: pointer;
+    &:hover,
+    &:active {
+      color: $light;
+    }
+  }
+
+  &::backdrop {
+    background-color: rgba($dark, 0.8);
+  }
+}
+
+#gallery-heading {
+  padding: 12em 2em;
+  .gallery-heading-container {
+    h1 {
+      width: max-content;
+      padding: 0.5em;
+      background-color: rgba($dark, 0.5);
+      font-size: 2.25rem;
+      color: $light;
+    }
+  }
+}
+
+#gallery {
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    background: $dark;
+    clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+  }
+
+  .search-btn {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    border-radius: 0 2px 2px 0;
+  }
+
+  select {
+    text-transform: uppercase;
+    font-family: $ff-heading !important;
+    color: $dark;
+    border-radius: 2px;
+    border: 2px solid $secondary;
+    box-shadow: none;
+    &:focus {
+      border: 2px solid $primary;
+    }
+  }
+
+  input[type='text'] {
+    padding: 0.5em;
+    color: $dark;
+    font-family: $ff-text;
+    border-radius: 2px 0 0 2px;
+    border: 2px solid transparent;
+    box-shadow: none;
+    &:focus {
+      border: 2px solid $primary;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #gallery-heading {
+    .gallery-heading-container {
+      h1 {
+        font-size: 3.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #gallery-heading {
+    padding: 12em 0 6em;
+    .gallery-heading-container {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+// ------------- For Artists Page -----------------------
+
+#artists-heading {
+  padding: 12em 2em;
+  .artists-heading-container {
+    h1 {
+      width: max-content;
+      padding: 0.5em;
+      background-color: rgba($dark, 0.5);
+      font-size: 2.25rem;
+      color: $light;
+    }
+  }
+}
+
+#artists {
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    background: $dark;
+    clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+  }
+  .list-group {
+    border-radius: 4px;
+    flex-direction: row;
+    box-shadow: 0 1px 3px 0 rgba($primary, 0.6);
+    .list-group-item {
+      flex: 1 0 25%;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: $ff-heading;
+      color: $light;
+      background-color: $dark;
+      border: 1px solid rgba($light, 0.2);
+      cursor: pointer;
+
+      &.active {
+        color: $light;
+        background-color: $primary;
+        &:hover,
+        &:active {
+          background-color: $primary;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($light, 0.1);
+      }
+    }
+  }
+
+  .artist-page {
+    display: none;
+
+    .artist-image-container {
+      width: 15rem;
+      border: 2px solid $light;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    &.active-page {
+      display: block;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $primary;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $light;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #artists-heading {
+    .artists-heading-container {
+      h1 {
+        font-size: 3.75rem;
+      }
+    }
+  }
+
+  #artists {
+    .list-group {
+      flex-direction: column;
+      .list-group-item {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #artists-heading {
+    padding: 12em 0 6em;
+    .artists-heading-container {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+  #artists {
+    .artist-page {
+      display: none;
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+// ------ For Contact Page -------------
+
+.modal-content {
+  position: relative;
+  .submit-success-message {
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+    i {
+      display: block;
+      position: absolute;
+      top: -25%;
+      height: max-content;
+      font-size: 5rem;
+      color: $primary;
+      transform: translateY(25%);
+      overflow: hidden;
+    }
+  }
+}
+
+#contact-heading {
+  padding: 12em 2em;
+  .contact-heading-container {
+    h1 {
+      width: max-content;
+      padding: 0.5em;
+      background-color: rgba($dark, 0.5);
+      font-size: 2.25rem;
+      color: $light;
+    }
+  }
+}
+
+#contact {
+  position: relative;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    background: $light;
+    clip-path: polygon(100% 85%, 0% 100%, 100% 100%);
+  }
+
+  label {
+    font-family: $ff-text;
+  }
+
+  input,
+  textarea {
+    color: $dark;
+    font-family: $ff-text;
+    border-radius: 2px;
+    border: 2px solid rgba($dark, 0.2);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    padding: 0.5em;
+
+    &:focus {
+      border: 2px solid rgba($primary, 0.5);
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    padding: 0.75em 1.75em;
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact-heading {
+    .contact-heading-container {
+      h1 {
+        font-size: 3.75rem;
+      }
+    }
+  }
+
+  .contact-info {
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #contact-heading {
+    padding: 12em 0 6em;
+    .contact-heading-container {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+}
