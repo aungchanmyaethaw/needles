@@ -49,7 +49,8 @@ function setArtiststoUI(artist, index = 1) {
                     alt="${artist.name}"
                   />
                   <div class="card-body">
-                    <h4
+                  <div>
+                  <h4
                       class="font-heading card-title text-primary text-uppercase"
                     >
                       ${artist.name}
@@ -57,14 +58,19 @@ function setArtiststoUI(artist, index = 1) {
                     <h6 class="font-heading text-dark text-uppercase">
                      ${artist.rank}
                     </h6>
-                    <p class="font-text card-text">
+                  </div>
+                    
+                    <p class="font-text card-text ">
                     ${getIntroString(artist.about)}
                     </p>
-                      <button class="primary-btn py-2 px-3 fs-5" data-set-artist-id="${
+                    <div>
+                    <button class="primary-btn py-2 px-3 fs-5" data-set-artist-id="${
                         artist.id
                       }">
                         Meet ${getFirstName(artist.name)}
                       </button>
+                    </div>
+                      
                   </div>
                 </div>`
   artistsContainerEl.appendChild(artistColEl)
