@@ -99,6 +99,10 @@ body {
   }
 }
 
+.container-fluid {
+  max-width: 1440px;
+}
+
 figure {
   display: block;
   min-width: 100%;
@@ -399,9 +403,14 @@ figure {
 
   .card {
     min-height: 100%;
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
   }
 }
-
 @media screen and (min-width: 992px) {
   #artists-main {
     .artists-heading {
